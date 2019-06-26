@@ -6,4 +6,4 @@ RUN apk add --no-cache python3 && \
 
 ENV SYNC_OPTIONS ""
 
-CMD aws s3 sync s3://$SOURCE_BUCKET/ s3://$DESTINATION_BUCKET/ $SYNC_OPTIONS
+CMD echo "Running aws s3 sync s3://$SOURCE_BUCKET/ s3://$DESTINATION_BUCKET/ $SYNC_OPTIONS" && aws s3 sync s3://$SOURCE_BUCKET/ s3://$DESTINATION_BUCKET/ $SYNC_OPTIONS
